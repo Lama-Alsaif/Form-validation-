@@ -1,0 +1,15 @@
+body{
+    padding-top: 25px;
+}
+
+label , p{
+    font-weight: bold;
+}
+
+.chkbox label{
+    font-weight: normal;
+}
+
+.dropdown{
+    margin: 15px 0 25px;
+}

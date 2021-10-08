@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="request.js" defer></script>
+    <link rel="stylesheet" href="request.css">
+    <title>Gym reservation</title>
+</head>
+<body>
+
+    <form name="myForm" onsubmit="return validateForm()" method="post" action="success.html">
+
+        <div id="textf">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><span id="fname_msg"></span><br>
+        <label for="PhnNum">Phone number:</label><br>
+        <input type="text" id="PhnNum" name="PhnNum"><br><span id="PhnNum_msg"></span>
+        </div>
+    
+        <p>Date to visit the gym:</p>
+        <input type="date" id="start" name="trip-start"
+           value="2021-10-1"
+           min="2021-10-1" max="2021-12-30"><br>
+
+            <div class="chkbox">
+            <p>Pick classes:<span id="chkbox_msg"></span></p>
+            <input type="checkbox" id="class1" name="class1" value="CYCLE CLASS">
+            <label for="class1">CYCLE CLASS</label><br>
+            <input type="checkbox" id="class2" name="class2" value="BOX FIT CLASS">
+            <label for="class2">BOX FIT CLASS</label><br>
+            <input type="checkbox" id="class3" name="class3" value="AEROBICS CLASS">
+            <label for="class3">AEROBICS CLASS</label><br>
+            <input type="checkbox" id="class4" name="class4" value="COMBAT CLASS">
+            <label for="class4">COMBAT CLASS</label><br>
+            </div>
+            
+            <div class="dropdown">
+            <label for="cities">City:</label><span id="dd_msg"></span><br>
+      <select id="cities" name="cities">
+        <option value="select">--- Please select ---</option>
+        <option value="Riyadh">Riyadh</option>
+        <option value="Jeddah">Jeddah</option>
+        <option value="Mecca">Mecca</option>
+      </select><br>
+    </div>
+    
+      <input type="submit" id="submit" value="Submit">
+      <input type="reset" value="Reset">
+    
+    </form>
+    
+</body>
+</html>
+
