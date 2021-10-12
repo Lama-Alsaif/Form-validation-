@@ -8,9 +8,24 @@
     <title>Success</title>
 </head>
 <body>
-    <h2><span id="nfname"></span>, thanks for your request !
-        We will contact you soon via <span id="nphnNum"></span>
-        to schedule a first visit to our Gym in <span id="ncity"></span>
+    <h2><span id="nfname"></span>, thanks for your request !<br>
+        We will contact you soon via <span id="nphnNum"></span><br>
+        to schedule a first visit to our Gym in <span id="ncity"></span><br>
         To try our <span id="ncls1"></span> and <span id="ncls2"></span> classes.</h2>
+
+        <script>
+            
+            document.getElementById("nfname").innerHTML = localStorage.getItem("first_name");
+            document.getElementById("nphnNum").innerHTML = localStorage.getItem("Phone_number");
+            document.getElementById("ncity").innerHTML = localStorage.getItem("CITY");
+            document.getElementById("ncls1").innerHTML = localStorage.getItem("CLASS1");
+            document.getElementById("ncls2").innerHTML = localStorage.getItem("CLASS2");
+        </script>
+
+        <style>
+            body{
+                text-align:center;
+            }
+        </style>
 </body>
 </html>

@@ -18,6 +18,9 @@ function validateForm() {
 
     const ddl = document.getElementById("cities");
     var ddlValue = ddl.options[ddl.selectedIndex].value;
+
+    
+     
     
 
     if (fname == "") {
@@ -59,9 +62,18 @@ function validateForm() {
     {
      document.getElementById("dd_msg").innerHTML = "Please select a city";
      return false;
+
+    
     }
+    let chk0= check[0];
+    let chk1 = check[1];
+    let ddv = ddlValue;
 
-
+    localStorage.setItem("first_name",fname);
+    localStorage.setItem("Phone_number",PhnNum);
+    localStorage.setItem("CITY",ddv);
+    localStorage.setItem("CLASS1",chk0);
+    localStorage.setItem("CLASS2",chk1);
 
       
   };
@@ -76,9 +88,7 @@ sub.addEventListener("click" , validateForm);
 
 const checks = document.querySelectorAll('input[type=checkbox]');
 
-document.getElementById("nfname").innerHTML = fname;
-document.getElementById("nphnNum").innerHTML = PhnNum;
-document.getElementById("ncity").innerHTML = ddlValue;
-document.getElementById("ncls1").innerHTML = check[0];
-document.getElementById("ncls2").innerHTML = check[1];
+    
+
+
 
